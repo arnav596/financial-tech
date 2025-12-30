@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://financial-tech.vercel.app/sitemap.xml
+Sitemap: https://financial-tech-58d2.vercel.app/sitemap.xml
