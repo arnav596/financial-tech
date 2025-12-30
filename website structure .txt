@@ -1,0 +1,8 @@
+/project-root
+ ├─ public
+ │   ├─ sitemap.xml
+ │   ├─ robots.txt
+ │
+ ├─ pages / src / app (your site files)
+ ├─ package.json
+ └─ vercel.json (optional)

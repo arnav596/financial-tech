@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Financial Calculators | Budget, SIP, EMI, FD & Goal Planning</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Use free financial calculators to plan budget, track expenses, calculate EMI, SIP, FD returns and goal planning. Learn smart money management.">
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f4f6f8;
+  margin:0;
+  line-height:1.7;
+}
+header, footer {
+  background:#0a3d62;
+  color:white;
+  padding:15px;
+  text-align:center;
+}
+nav a {
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+section {
+  background:white;
+  margin:20px auto;
+  padding:25px;
+  max-width:1000px;
+  border-radius:8px;
+}
+h2, h3 {
+  color:#0a3d62;
+}
+input, button {
+  width:100%;
+  padding:8px;
+  margin:5px 0;
+}
+button {
+  background:#0a3d62;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+.result {
+  font-weight:bold;
+  margin-top:10px;
+}
+a { color:#0a3d62; }
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Financial Calculators</h1>
+<p>Plan your money smartly using simple and free financial tools</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="budgeting.html">Budgeting</a>
+<a href="saving.html">Saving</a>
+<a href="investing.html">Investing</a>
+<a href="blog.html">Blog</a>
+</nav>
+</header>
+
+<!-- INTRODUCTION -->
+<section>
+<h2>Why Financial Calculators Are Important</h2>
+
+<p>
+Financial calculators help individuals understand their money better.
+Most people struggle with budgeting, saving, loan planning, and investing
+because financial calculations can be confusing.
+</p>
+
+<p>
+Using financial calculators makes planning simple, accurate, and stress-free.
+Whether you are a student, salaried employee, or self-employed,
+these tools help you make informed financial decisions.
+</p>
+
+<p>
+For example, before taking a loan, an EMI calculator shows
+how much you will pay every month.
+Similarly, SIP and FD calculators help estimate future wealth creation.
+</p>
+
+<p>
+To learn the basics of money management, visit our
+<a href="budgeting.html">Budgeting Guide</a> and
+<a href="saving.html">Saving Guide</a>.
+</p>
+</section>
+
+<!-- MONTHLY BUDGET PLANNER -->
+<section>
+<h2>Monthly Budget Planner</h2>
+
+<p>
+A monthly budget planner helps divide income into expenses, savings,
+and investments. It is the foundation of financial discipline.
+</p>
+
+<label>Monthly Income (₹)</label>
+<input type="number" id="income">
+
+<label>Total Monthly Expenses (₹)</label>
+<input type="number" id="expenses">
+
+<button onclick="budgetPlanner()">Calculate</button>
+<p class="result" id="budgetResult"></p>
+
+<p>
+<strong>Real-life example:</strong>  
+If your monthly income is ₹50,000 and expenses are ₹35,000,
+your savings will be ₹15,000. This amount can be invested using SIPs.
+</p>
+
+<p>
+Learn detailed budgeting methods on our
+<a href="budgeting.html">Budgeting Page</a>.
+</p>
+</section>
+
+<!-- MONTHLY EXPENSE TRACKER -->
+<section>
+<h2>Monthly Expense Tracker</h2>
+
+<p>
+Tracking expenses helps identify unnecessary spending
+and improves financial awareness.
+</p>
+
+<label>Total Income (₹)</label>
+<input type="number" id="trackIncome">
+
+<label>Total Expenses (₹)</label>
+<input type="number" id="trackExpense">
+
+<button onclick="expenseTracker()">Track</button>
+<p class="result" id="expenseResult"></p>
+
+<p>
+<strong>Real-life example:</strong>  
+If you earn ₹40,000 but spend ₹38,000,
+you have very little room for savings.
+Expense tracking helps correct this.
+</p>
+</section>
+
+<!-- EMI CALCULATOR -->
+<section>
+<h2>EMI Calculator</h2>
+
+<p>
+An EMI calculator helps estimate monthly loan payments
+and prevents over-borrowing.
+</p>
+
+<label>Loan Amount (₹)</label>
+<input type="number" id="loan">
+
+<label>Interest Rate (%)</label>
+<input type="number" id="rate">
+
+<label>Tenure (Years)</label>
+<input type="number" id="time">
+
+<button onclick="emiCalculator()">Calculate EMI</button>
+<p class="result" id="emiResult"></p>
+
+<p>
+Always calculate EMI before taking loans to avoid financial stress.
+</p>
+</section>
+
+<!-- SIP CALCULATOR -->
+<section>
+<h2>SIP Calculator</h2>
+
+<p>
+A SIP calculator estimates the future value of monthly investments
+made in mutual funds.
+</p>
+
+<label>Monthly SIP Amount (₹)</label>
+<input type="number" id="sipAmount">
+
+<label>Expected Return (%)</label>
+<input type="number" id="sipRate">
+
+<label>Investment Period (Years)</label>
+<input type="number" id="sipTime">
+
+<button onclick="sipCalculator()">Calculate</button>
+<p class="result" id="sipResult"></p>
+
+<p>
+SIPs help achieve long-term goals like buying a house or retirement.
+Read more on our <a href="investing.html">Investing Guide</a>.
+</p>
+</section>
+
+<!-- FD CALCULATOR -->
+<section>
+<h2>Fixed Deposit Calculator</h2>
+
+<p>
+FD calculators show guaranteed returns from bank deposits.
+</p>
+
+<label>Deposit Amount (₹)</label>
+<input type="number" id="fdAmount">
+
+<label>Interest Rate (%)</label>
+<input type="number" id="fdRate">
+
+<label>Time (Years)</label>
+<input type="number" id="fdTime">
+
+<button onclick="fdCalculator()">Calculate</button>
+<p class="result" id="fdResult"></p>
+</section>
+
+<!-- GOAL PLANNING -->
+<section>
+<h2>Goal Planning Calculator</h2>
+
+<p>
+Goal planning calculators estimate how much you need to save monthly
+to achieve future goals.
+</p>
+
+<label>Goal Amount (₹)</label>
+<input type="number" id="goal">
+
+<label>Expected Return (%)</label>
+<input type="number" id="goalRate">
+
+<label>Time (Years)</label>
+<input type="number" id="goalTime">
+
+<button onclick="goalCalculator()">Calculate</button>
+<p class="result" id="goalResult"></p>
+</section>
+
+<!-- FAQ -->
+<section>
+<h2>Frequently Asked Questions (FAQ)</h2>
+
+<h3>Are these calculators accurate?</h3>
+<p>
+Yes, they use standard financial formulas. Actual returns may vary.
+</p>
+
+<h3>Are these tools suitable for beginners?</h3>
+<p>
+Yes, all calculators are designed for beginners.
+</p>
+
+<h3>Can I rely on them for investment decisions?</h3>
+<p>
+These tools are for educational purposes only.
+</p>
+</section>
+
+<!-- DISCLAIMER -->
+<section>
+<h2>Disclaimer</h2>
+<p>
+This website is for educational purposes only.
+We are not SEBI-registered financial advisors.
+Investments are subject to market risks.
+Please consult a professional advisor before investing.
+</p>
+</section>
+
+<footer>
+<p>© 2025 Financial Literacy | Learn • Plan • Grow</p>
+<a href="privacy-policy.html" style="color:white;">Privacy Policy</a>
+</footer>
+
+<script>
+function budgetPlanner() {
+  let i = income.value;
+  let e = expenses.value;
+  budgetResult.innerText = "Savings: ₹" + (i - e);
+}
+
+function expenseTracker() {
+  expenseResult.innerText =
+  trackExpense.value > trackIncome.value
+  ? "You are overspending!"
+  : "Your spending is under control.";
+}
+
+function emiCalculator() {
+  let p = loan.value;
+  let r = rate.value / 12 / 100;
+  let n = time.value * 12;
+  let emi = (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+  emiResult.innerText = "Monthly EMI: ₹" + emi.toFixed(2);
+}
+
+function sipCalculator() {
+  let P = sipAmount.value;
+  let r = sipRate.value / 12 / 100;
+  let n = sipTime.value * 12;
+  let fv = P * ((Math.pow(1+r,n)-1)/r)*(1+r);
+  sipResult.innerText = "Future Value: ₹" + fv.toFixed(2);
+}
+
+function fdCalculator() {
+  let a = fdAmount.value * Math.pow(1 + fdRate.value/100, fdTime.value);
+  fdResult.innerText = "Maturity Amount: ₹" + a.toFixed(2);
+}
+
+function goalCalculator() {
+  let r = goalRate.value / 12 / 100;
+  let n = goalTime.value * 12;
+  let sip = goal.value * r / (Math.pow(1+r,n)-1);
+  goalResult.innerText = "Required Monthly SIP: ₹" + sip.toFixed(2);
+}
+</script>
+
+</body>
+</html>
